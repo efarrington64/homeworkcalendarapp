@@ -41,5 +41,7 @@ dependencies {
     ktlint(libs.ktlint, ::configureKtlint)
     implementation(libs.material)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.preference.ktx)
+    implementation(libs.androidx.viewpager2)
     implementation(libs.androidx.multidex)
 }

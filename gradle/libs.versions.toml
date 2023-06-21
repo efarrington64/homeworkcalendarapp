@@ -14,4 +14,6 @@ ktlint = "com.pinterest:ktlint:0.48.1"
 material = { module = "com.google.android.material:material", version.ref = "androidx" }
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx" }
+androidx-preference-ktx = "androidx.preference:preference-ktx:1.2.0"
+androidx-viewpager2 = "androidx.viewpager2:viewpager2:1.0.0"
 androidx-multidex = "androidx.multidex:multidex:2.0.1"

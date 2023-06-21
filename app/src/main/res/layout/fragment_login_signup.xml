@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:gravity="center"
+  android:orientation="vertical">
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:hint="Email">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/emailText"
+      android:layout_width="240dp"
+      android:layout_height="match_parent"
+      android:inputType="textEmailAddress" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:hint="Password">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/passwordText"
+      android:layout_width="240dp"
+      android:layout_height="match_parent"
+      android:inputType="textPassword" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:hint="Confirm password">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/passwordText2"
+      android:layout_width="240dp"
+      android:layout_height="match_parent"
+      android:inputType="textPassword" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="Phone number">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/phoneText"
+      android:layout_width="240dp"
+      android:layout_height="match_parent"
+      android:inputType="phone" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Button
+    android:id="@+id/primaryButton"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:text="Sign up" />
+
+  <Button
+    android:id="@+id/secondaryButton"
+    style="@style/Widget.AppCompat.Button.Borderless"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:text="Have account?"
+    android:textColor="?colorPrimary" />
+</LinearLayout>
