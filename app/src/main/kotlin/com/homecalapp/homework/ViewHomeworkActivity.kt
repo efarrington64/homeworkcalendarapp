@@ -1,11 +1,12 @@
-package com.example.app
+package com.homecalapp.homework
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.homecalapp.app.R
 
-class MyTestActivity : AppCompatActivity() {
+class ViewHomeworkActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.Theme_AppCompat_Light_NoActionBar)
+        setContentView(R.layout.activity_view_homework)
     }
 }

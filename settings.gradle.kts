@@ -9,7 +9,6 @@ dependencyResolutionManagement.repositories {
     maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
 }
 
-rootProject.name = "android-app"
+rootProject.name = "homeworkcalendarapp"
 
 include("app")
-include("website")

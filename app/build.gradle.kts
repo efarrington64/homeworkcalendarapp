@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     kotlin("android") version libs.versions.kotlin
     kotlin("kapt") version libs.versions.kotlin
-    alias(libs.plugins.kotlinx.kover)
 }
 
 kotlin.jvmToolchain(libs.versions.jdk.get().toInt())
@@ -40,10 +39,7 @@ android {
 
 dependencies {
     ktlint(libs.ktlint, ::configureKtlint)
-    ktlint(libs.rulebook.ktlint)
     implementation(libs.material)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.multidex)
-    testImplementation(kotlin("test-junit", libs.versions.kotlin.get()))
-    testImplementation(libs.bundles.androidx.test)
 }
