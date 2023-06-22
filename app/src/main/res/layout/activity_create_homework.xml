@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.homecalapp.homework.CreateHomeworkActivity">
+
+  <Button
+    android:id="@+id/returnStartButtonCH"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="158dp"
+    android:layout_marginLeft="158dp"
+    android:layout_marginTop="14dp"
+    android:layout_marginEnd="159dp"
+    android:layout_marginRight="159dp"
+    android:text="Back to Start"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/addAssignmentButton" />
+
+  <EditText
+    android:id="@+id/professorNameET"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="100dp"
+    android:layout_marginLeft="100dp"
+    android:layout_marginTop="34dp"
+    android:layout_marginEnd="101dp"
+    android:layout_marginRight="101dp"
+    android:ems="10"
+    android:hint="Professor"
+    android:inputType="text"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/classNameET" />
+
+  <EditText
+    android:id="@+id/classNameET"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:hint="Class Name"
+    android:inputType="text"
+    tools:layout_editor_absoluteX="100dp"
+    tools:layout_editor_absoluteY="242dp" />
+
+  <EditText
+    android:id="@+id/assignmentNameET"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="100dp"
+    android:layout_marginLeft="100dp"
+    android:layout_marginTop="164dp"
+    android:layout_marginEnd="101dp"
+    android:layout_marginRight="101dp"
+    android:layout_marginBottom="33dp"
+    android:ems="10"
+    android:hint="Assignment Name"
+    android:inputType="text"
+    app:layout_constraintBottom_toTopOf="@+id/classNameET"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+    android:id="@+id/dueDateET"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="100dp"
+    android:layout_marginLeft="100dp"
+    android:layout_marginTop="28dp"
+    android:layout_marginEnd="101dp"
+    android:layout_marginRight="101dp"
+    android:ems="10"
+    android:hint="Due Date"
+    android:inputType="date"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/professorNameET" />
+
+  <TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="106dp"
+    android:layout_marginLeft="106dp"
+    android:layout_marginTop="93dp"
+    android:layout_marginEnd="107dp"
+    android:layout_marginRight="107dp"
+    android:text="Add an Assignment:"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <CheckBox
+    android:id="@+id/checkBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="123dp"
+    android:layout_marginLeft="123dp"
+    android:layout_marginTop="23dp"
+    android:layout_marginEnd="123dp"
+    android:layout_marginRight="123dp"
+    android:text="Notify near due date?"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/dueDateET" />
+
+  <Button
+    android:id="@+id/addAssignmentButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="158dp"
+    android:layout_marginLeft="158dp"
+    android:layout_marginTop="17dp"
+    android:layout_marginEnd="159dp"
+    android:layout_marginRight="159dp"
+    android:text="Add assignment"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+</androidx.constraintlayout.widget.ConstraintLayout>

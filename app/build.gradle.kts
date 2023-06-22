@@ -38,10 +38,13 @@ android {
 }
 
 dependencies {
+    implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
     ktlint(libs.ktlint, ::configureKtlint)
     implementation(libs.material)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.preference.ktx)
     implementation(libs.androidx.viewpager2)
     implementation(libs.androidx.multidex)
+    implementation("com.google.code.gson:gson:2.10.1")
 }

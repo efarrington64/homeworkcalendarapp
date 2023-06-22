@@ -1,8 +1,8 @@
 [versions]
 jdk = "11" # min for android
-sdk-min = "14"
+sdk-min = "16"
 sdk-target = "33"
-kotlin = "1.8.10"
+kotlin = "1.8.20"
 android-plugin = "8.0.1"
 androidx = "1.6.0"
 
