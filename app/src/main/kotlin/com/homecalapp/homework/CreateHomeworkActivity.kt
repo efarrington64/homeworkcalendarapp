@@ -12,9 +12,11 @@ import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
 import com.homecalapp.app.R
 import com.homecalapp.main.MainActivity
+import java.io.BufferedReader
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
+import java.io.FileReader
 import java.io.PrintWriter
 import java.util.Date
 
@@ -44,10 +46,15 @@ class CreateHomeworkActivity : AppCompatActivity() {
         // get assignment list
         val gson = Gson()
         val path = filesDir
-        file = File(path, "AssignmentStorage")
-        val jsonString = FileInputStream(file).bufferedReader().use() {it.readText()}
-        val type = object: TypeToken<List<Assignment>>() {}.type
-        assignmentList = gson.fromJson(jsonString, type)
+        file = File(path, "AssignmentStorage.txt")
+        val br = BufferedReader(FileReader(file))
+        if (br.readLine() != null) {
+            val jsonString = FileInputStream(file).bufferedReader().use() {it.readText()}
+            val type = object: TypeToken<List<Assignment>>() {}.type
+            assignmentList = gson.fromJson(jsonString, type)
+        } else{
+            assignmentList = ArrayList<Assignment>()
+        }
 
         // info fields
         assignmentNameET = findViewById(R.id.assignmentNameET)
