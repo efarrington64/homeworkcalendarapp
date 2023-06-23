@@ -15,7 +15,7 @@
       android:id="@+id/emailText"
       android:layout_width="240dp"
       android:layout_height="match_parent"
-      android:inputType="textEmailAddress" />
+      android:inputType="textEmailAddress"/>
   </com.google.android.material.textfield.TextInputLayout>
 
   <com.google.android.material.textfield.TextInputLayout
@@ -27,7 +27,7 @@
       android:id="@+id/passwordText"
       android:layout_width="240dp"
       android:layout_height="match_parent"
-      android:inputType="textPassword" />
+      android:inputType="textPassword"/>
   </com.google.android.material.textfield.TextInputLayout>
 
   <Button
@@ -35,7 +35,7 @@
     android:layout_width="240dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="32dp"
-    android:text="Sign in" />
+    android:text="Sign in"/>
 
   <Button
     android:id="@+id/secondaryButton"
@@ -43,5 +43,5 @@
     android:layout_width="240dp"
     android:layout_height="wrap_content"
     android:text="Create account"
-    android:textColor="?colorPrimary" />
+    android:textColor="?colorPrimary"/>
 </LinearLayout>

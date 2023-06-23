@@ -2,27 +2,22 @@ package com.homecalapp.homework
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
-import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
 import com.homecalapp.app.R
 import com.homecalapp.main.MainActivity
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileInputStream
-import java.io.FileOutputStream
 import java.io.FileReader
 import java.io.PrintWriter
 import java.util.Date
 
 class CreateHomeworkActivity : AppCompatActivity() {
-
-
     // information about assignment
     lateinit var assignmentNameET: EditText
     lateinit var classNameET: EditText
@@ -41,19 +36,19 @@ class CreateHomeworkActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_homework)
+        setContentView(R.layout.activity_homework_create)
 
         // get assignment list
         val gson = Gson()
         val path = filesDir
         file = File(path, "AssignmentStorage.txt")
         val br = BufferedReader(FileReader(file))
-        if (br.readLine() != null) {
-            val jsonString = FileInputStream(file).bufferedReader().use() {it.readText()}
-            val type = object: TypeToken<List<Assignment>>() {}.type
-            assignmentList = gson.fromJson(jsonString, type)
-        } else{
-            assignmentList = ArrayList<Assignment>()
+        assignmentList = if (br.readLine() != null) {
+            val jsonString = FileInputStream(file).bufferedReader().use { it.readText() }
+            val type = object : TypeToken<List<Assignment>>() {}.type
+            gson.fromJson(jsonString, type)
+        } else {
+            ArrayList()
         }
 
         // info fields
@@ -74,13 +69,14 @@ class CreateHomeworkActivity : AppCompatActivity() {
 
     // manage assignment
     fun submitButtonClick() {
-        val assignment = Assignment(assignmentNameET.text.toString(),
-                                    classNameET.text.toString(),
-                                    professorET.text.toString(),
-                                    Date((dueDateET.text.toString()).toLong()))
+        val assignment = Assignment(
+            assignmentNameET.text.toString(),
+            classNameET.text.toString(),
+            professorET.text.toString(),
+            Date((dueDateET.text.toString()).toLong())
+        )
         val gson = Gson()
         assignmentList.add(assignment)
         PrintWriter(file).use { out -> out.println(gson.toJson(assignmentList)) }
     }
-
 }
