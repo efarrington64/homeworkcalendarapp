@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+    android:id ="@+id/notification"
+    android:title="share"
+    android:icon="@android:drawable/ic_popup_reminder"
+    android:contentDescription="notification"
+    app:showAsAction ="ifRoom" />
+  <item
+    android:id ="@+id/share"
+    android:title="share"
+    android:icon="@android:drawable/ic_menu_share"
+    android:contentDescription="share"
+    app:showAsAction ="ifRoom" />
+  <item
+    android:id ="@+id/search"
+    android:title="Search"
+    android:icon="@android:drawable/ic_menu_search"
+    android:contentDescription="search"
+    app:showAsAction ="ifRoom" />
+
+
+
+
+
+</menu>
