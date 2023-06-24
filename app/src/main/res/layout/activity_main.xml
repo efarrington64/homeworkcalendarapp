@@ -11,27 +11,30 @@
     <androidx.appcompat.widget.Toolbar
       android:id="@+id/toolbar"
       android:layout_width="match_parent"
-      android:layout_height="?actionBarSize"/>
+      android:layout_height="?actionBarSize"
+      app:titleTextColor="@android:color/white"
+      app:title="HCA"/>
 
     <com.google.android.material.tabs.TabLayout
       android:id="@+id/tabLayout"
+      style="@style/Widget.MaterialComponents.TabLayout.Colored"
       android:layout_width="match_parent"
-      android:layout_height="?actionBarSize"
-      android:background="?colorPrimary"/>
+      android:layout_height="?actionBarSize"/>
   </com.google.android.material.appbar.AppBarLayout>
 
-  <FrameLayout
-    android:id="@+id/frameLayout"
+  <androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/pager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
   <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    android:id="@+id/button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_margin="32dp"
     android:text="Create"
     app:icon="@android:drawable/ic_input_add"
-    app:layout_anchor="@id/frameLayout"
+    app:layout_anchor="@id/pager"
     app:layout_anchorGravity="bottom|end"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
