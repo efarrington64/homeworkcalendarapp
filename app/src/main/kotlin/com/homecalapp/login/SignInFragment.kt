@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
 import com.homecalapp.app.R
 import com.homecalapp.toast
 
-class LoginSigninFragment : Fragment() {
+class SignInFragment : Fragment() {
     lateinit var emailText: EditText
     lateinit var passwordText: EditText
     lateinit var primaryButton: Button

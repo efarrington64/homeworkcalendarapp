@@ -12,14 +12,14 @@ import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
-import androidx.preference.PreferenceManager
 import com.homecalapp.PREFS_EMAIL
 import com.homecalapp.PREFS_PASSWORD
 import com.homecalapp.PREFS_PHONE
 import com.homecalapp.app.R
+import com.homecalapp.defaultSharedPreferences
 import com.homecalapp.main.MainActivity
 
-class LoginSignupFragment : Fragment() {
+class SignUpFragment : Fragment() {
     lateinit var emailText: EditText
     lateinit var passwordText: EditText
     lateinit var passwordText2: EditText
@@ -50,7 +50,7 @@ class LoginSignupFragment : Fragment() {
 
         primaryButton.isEnabled = false
         primaryButton.setOnClickListener {
-            PreferenceManager.getDefaultSharedPreferences(requireContext()).edit {
+            requireContext().defaultSharedPreferences.edit {
                 putString(PREFS_EMAIL, emailText.text.toString())
                 putString(PREFS_PASSWORD, passwordText.text.toString())
                 putString(PREFS_PHONE, phoneText.text.toString())

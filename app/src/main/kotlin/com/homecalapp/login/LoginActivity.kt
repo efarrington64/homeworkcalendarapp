@@ -23,8 +23,8 @@ class LoginActivity : AppCompatActivity() {
         FragmentStateAdapter(manager, lifecycle) {
         override fun getItemCount(): Int = 2
         override fun createFragment(position: Int): Fragment = when (position) {
-            0 -> LoginSigninFragment()
-            else -> LoginSignupFragment()
+            0 -> SignInFragment()
+            else -> SignUpFragment()
         }
     }
 }

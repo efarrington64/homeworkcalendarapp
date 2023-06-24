@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:foreground="?selectableItemBackground"
+  android:orientation="vertical"
+  android:padding="16dp">
+
+  <TextView
+    android:id="@+id/titleText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="CS101 - Homework 1"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+  <TextView
+    android:id="@+id/subtitleText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:text="Lorem ipsum dolor sit amet, consectetur adispiscing elit, sed do eiusmod tempor."/>
+</LinearLayout>

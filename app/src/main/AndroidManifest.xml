@@ -23,7 +23,7 @@
             android:name="com.homecalapp.login.LoginActivity"
             android:exported="true" />
         <activity
-            android:name="com.homecalapp.homework.ViewHomeworkActivity"
+            android:name="com.homecalapp.homework.ViewHomeworkFragment"
             android:exported="true" />
     </application>
 
